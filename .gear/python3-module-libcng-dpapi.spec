@@ -5,7 +5,7 @@
 
 Name:    python3-module-%pypi_name
 Version: 0.0.1
-Release: alt2
+Release: alt1
 
 Summary: Wrapper around DPAPI-CNG Library
 License: GPLv2

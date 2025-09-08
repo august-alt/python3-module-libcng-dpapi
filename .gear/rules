@@ -1,2 +1,2 @@
-tar: v@version@:. name=libcng-dpapi-@version@ base=libcng-dpapi-@version@
+tar:. name=libcng-dpapi-@version@ base=libcng-dpapi-@version@
 spec: .gear/python3-module-libcng-dpapi.spec

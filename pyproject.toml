@@ -44,10 +44,16 @@ Repository = "https://github.com/august-alt/libcng-dpapi.git"
 "Bug Tracker" = "https://github.com/august-alt/libcng-dpapi/issues"
 
 [tool.setuptools]
-packages = ["src"]
+include-package-data = true
 
-[tool.setuptools.package-dir]
-"" = "src"
+[tool.setuptools.dynamic]
+version = {attr = "libcng_dpapi._version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sansldap = ["py.typed"]
 
 [tool.black]
 line-length = 88
