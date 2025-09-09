@@ -5,7 +5,7 @@
 
 Name:    python3-module-%pypi_name
 Version: 0.0.1
-Release: alt1
+Release: alt2
 
 Summary: Wrapper around DPAPI-CNG Library
 License: GPLv2
@@ -26,6 +26,8 @@ BuildRequires: python3(pytest-cov)
 %endif
 
 BuildArch: noarch
+
+Requires: libcng-dpapi
 
 Source: %pypi_name-%version.tar
 
@@ -50,6 +52,9 @@ An alternative Python library for DPAPI NG (CNG DPAPI) encryption and decription
 %python3_sitelibdir/%{pyproject_distinfo %pypi_name}
 
 %changelog
-* Mon Sep 08 2025 Vladimir Rubanov <august@altlinux.org> 0.0.1-alt1
+* Tue Sep 09 2025 Vladimir Rubanov <august@altlinux.org> 0.0.1-alt2
+- Add libcng-dpapi dependency.
+
+* Mon Sep 08 2025 Vladimir Rubanov <august@altlinux.org> 0.0.1-alt2
 - Initial build
 
