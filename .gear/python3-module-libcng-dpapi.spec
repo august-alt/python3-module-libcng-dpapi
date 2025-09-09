@@ -55,6 +55,9 @@ PFX user-protected passwords and LAPS encrypted credentials.
 %python3_sitelibdir/%{pyproject_distinfo %mod_name}
 
 %changelog
+* Tue Sep 09 2025 Vladimir Rubanov <august@altlinux.org> 0.0.2-alt1
+- Fix bindings for libcng-dpapi (thx to Valery Sinelnikov).
+
 * Tue Sep 09 2025 Vladimir Rubanov <august@altlinux.org> 0.0.1-alt2
 - Add libcng-dpapi dependency.
 
