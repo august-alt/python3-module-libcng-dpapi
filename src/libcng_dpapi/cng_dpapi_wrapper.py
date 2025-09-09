@@ -1,8 +1,16 @@
-from .cng_dpapi_wrapper import (
-    lib,
-    ProtectionDescriptor_p,
-    free_memory
-)
+try:
+    from .cng_dpapi_bindings import (
+        lib,
+        ProtectionDescriptor_p,
+        free_memory
+    )
+except ImportError:
+    # Fallback for direct execution/development
+    from cng_dpapi_bindings import (
+        lib,
+        ProtectionDescriptor_p,
+        free_memory
+    )
 import ctypes
 
 # A custom exception for library-specific errors
@@ -91,7 +99,7 @@ def protect_secret(
     finally:
         # CRITICAL: Free the memory allocated by the C library
         if encrypted_data_p.value:
-            free_memory(encrypted_data_p)            
+            free_memory(encrypted_data_p)
 
     return result
 
@@ -134,6 +142,6 @@ def unprotect_secret(
     finally:
         # CRITICAL: Free the memory allocated by the C library
         if unpacked_data_p.value:
-            free_memory(unpacked_data_p)            
+            free_memory(unpacked_data_p)
 
     return result

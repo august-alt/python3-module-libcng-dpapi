@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "libcng-dpapi"
-version = "0.0.1"
+name = "libcng_dpapi"
+version = "0.0.2"
 description = "Python bindings for libcng-dpapi C library"
 readme = "README.md"
 license = {text = "GPLv2"}
